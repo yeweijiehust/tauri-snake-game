@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a23;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.app-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00ff88;
+}
+
+.lang-bar {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-bar button {
+  padding: 6px 16px;
+  border: 1px solid #0f3460;
+  border-radius: 6px;
+  background: #16213e;
+  color: #a0aec0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lang-bar button.active {
+  background: #0f3460;
+  color: #00ff88;
+  border-color: #00ff88;
+}
+
+.game-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.game-controls button {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #0f3460;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.game-controls button:hover {
+  background: #1a5276;
+}
+
+.game-controls .score {
+  font-size: 18px;
+  color: #00ff88;
+  font-weight: 700;
+}
+
+.game-over-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  gap: 12px;
+}
+
+.game-over-overlay h2 {
+  color: #ff4757;
+  font-size: 28px;
+}
+
+.game-over-overlay button {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #00ff88;
+  color: #0a0a23;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.canvas-wrapper {
+  position: relative;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal-content {
+  background: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 24px;
+  min-width: 360px;
+  max-width: 480px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header h3 {
+  color: #00ff88;
+  font-size: 20px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #ff4757;
+}
+
+.modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modal-content th,
+.modal-content td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #0f3460;
+}
+
+.modal-content th {
+  color: #00ff88;
+  font-weight: 600;
+}
+
+.modal-content td {
+  color: #c0c0c0;
+  font-size: 14px;
+}
+
+.modal-content > p {
+  color: #a0aec0;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #0f3460;
+}
+
+.btn-danger {
+  padding: 6px 16px;
+  border: 1px solid #ff4757;
+  border-radius: 6px;
+  background: transparent;
+  color: #ff4757;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-danger:hover {
+  background: #ff4757;
+  color: #0a0a23;
+}
+
+.confirm-prompt {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.confirm-prompt p {
+  color: #e0e0e0;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.confirm-yes {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4757;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.confirm-yes:hover {
+  background: #e03e4e;
+}
+
+.confirm-no {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #0f3460;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.confirm-no:hover {
+  background: #1a5276;
+}
